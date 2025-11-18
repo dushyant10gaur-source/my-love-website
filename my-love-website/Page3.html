@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Abeeha 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffb3da, #ff8acb, #ff6fc7);
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px;
+            line-height: 1.7;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Gallery grid for images */
+        .gallery-grid {
+            width: 90%;
+            margin: 18px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .img-box {
+            width: 100%;
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+            transform-origin: center center;
+            transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.45s;
+            animation: fadeInUp 0.6s ease both;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .img-box:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .img-box:hover img {
+            transform: scale(1.06) rotate(0.5deg);
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: #ff2e76;
+            font-size: 22px;
+            animation: rise 5s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0) translateX(0); opacity: 0.4; }
+            100% { transform: translateY(-700px) translateX(30px); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: white;
+            color: #ff3f9e;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            animation: fadeIn 2.6s ease-in-out;
+        }
+
+        /* Music Player Styles */
+        .music-player-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2.5s ease;
+        }
+
+        .music-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .player-controls {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .song-selector {
+            margin-bottom: 20px;
+        }
+
+        .song-selector label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .song-selector select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #d34fd6;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .song-selector select:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #audioPlayer {
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .player-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #d34fd6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .album-art {
+                width: 150px;
+                height: 150px;
+            }
+
+            .music-player-section {
+                padding: 20px;
+            }
+
+            .player-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* Lightbox modal styles */
+        #lightboxModal {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.85);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 220ms ease, visibility 220ms;
+        }
+        #lightboxModal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            max-width: 96%;
+            max-height: 92%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 86vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+        .lightbox-caption {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>💗 Abeeha, You Make Everything Pinker 💗</h1>
+
+    <p>
+        Tumhari har chat ka vibe literally *melting level cute* hota hai 😭💞  
+        Kabhi "Nahi 😌", kabhi "Awww ❤️", aur kabhi woh *random cute taunts* 😭😂  
+        Sach bolu? You’re that type of girl jiske saath baat karte hi mood fix ho jata hai ✨💘  
+    </p>
+
+    <div class="gallery-grid">
+        <div class="img-box"><img loading="lazy" tabindex="0" role="button" class="gallery-photo" src="assets/images/pic1.jpg" alt="photo 1" aria-label="Open photo 1"></div>
+        <div class="img-box"><img loading="lazy" tabindex="0" role="button" class="gallery-photo" src="assets/images/pic2.jpg" alt="photo 2" aria-label="Open photo 2"></div>
+        <div class="img-box"><img loading="lazy" tabindex="0" role="button" class="gallery-photo" src="assets/images/pic3.jpg" alt="photo 3" aria-label="Open photo 3"></div>
+        <div class="img-box"><img loading="lazy" tabindex="0" role="button" class="gallery-photo" src="assets/images/pic4.jpg" alt="photo 4" aria-label="Open photo 4"></div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <p>
+        Aur haan...  
+        **"Tension mat le… main hoon na 🤞💗"**  
+        Tumhari baaton se sach mein "lottery lag gyi meri 😭❤️" wala feeling aata hai, fr.  
+    </p>
+
+    <p>
+        Tum bas aisi hi rehna — cute, funny, dramatic, and little bit sharmai hui 😉💓  
+        Baaki… main toh already tumhare messages ko full highlight kar chuka hoon 😭💖  
+    </p>
+
+    <!-- Music Player Section -->
+    <div class="music-player-section">
+        <h2 class="music-title">🎵 Special Songs For You 🎵</h2>
+        
+        <div class="music-player">
+            <div class="album-art">
+                <img id="albumArt" src="assets/images/HimalayKiGodmein.png" alt="Album Art">
+            </div>
+            
+            <div class="player-controls">
+                <h3 id="songTitle" style="margin: 10px 0; font-size: 18px;">🎶 Himalay Ki Godmein</h3>
+                <audio id="pageAudio" style="width: 100%; margin: 10px 0;">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-buttons">
+                    <button id="pauseResumeBtn" class="player-btn">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="page4.html" class="btn">Next ➜</a>
+
+    <!-- hearts floating -->
+    <script>
+        const pageAudio = document.getElementById('pageAudio');
+        const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+        
+        // Set the song for this page
+        pageAudio.src = 'assets/images/music/HimalayKiGodmein.mp3';
+        
+        // Check if user has already started music on page 1
+        if (localStorage.getItem('musicStarted') === 'true') {
+            // Auto-play when page loads
+            window.addEventListener('load', () => {
+                pageAudio.play().catch(err => console.log('Autoplay:', err));
+                pauseResumeBtn.textContent = '⏸ Pause';
+            });
+        }
+        
+        // Button click - play or pause
+        pauseResumeBtn.addEventListener('click', () => {
+            if (pageAudio.paused) {
+                pageAudio.play();
+                pauseResumeBtn.textContent = '⏸ Pause';
+                localStorage.setItem('musicStarted', 'true');
+            } else {
+                pageAudio.pause();
+                pauseResumeBtn.textContent = '▶ Play';
+            }
+        });
+
+        // Floating hearts function
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "💖";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+
+        // --- Lightbox functionality for gallery images ---
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const lightboxCaption = document.querySelector('.lightbox-caption');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            lightboxCaption.textContent = alt || '';
+            lightboxModal.classList.add('open');
+            lightboxModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            // focus close button for accessibility
+            lightboxClose.focus();
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('open');
+            lightboxModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            lightboxImg.src = '';
+        }
+
+        // attach to each gallery image
+        document.querySelectorAll('.gallery-photo').forEach((img) => {
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+            img.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(img.src, img.alt);
+                }
+            });
+        });
+
+        // close interactions
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('open')) closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+    <h2>Our Little Roblox Story 💗🎮</h2>
+
+    <p class="story-text">
+        Imagine… just playing Roblox casually  
+        and BOOM — you meet someone who feels  
+        like a whole comfort zone 😭✨  
+        <br><br>
+        **New Smith RP** wasn't just a game that day…  
+        it literally became the place  
+        where two strangers → lowkey became something more 💗  
+        <br><br>
+        And you, Abeeha…  
+        you're literally the best part of that game's history 😭💘  
+    </p>
+
+    <!-- Music Player Section -->
+    <div class="music-player-section">
+        <h2 class="music-title">🎵 Special Songs For You 🎵</h2>
+        
+        <div class="music-player">
+        <div class="album-art">
+            <img id="albumArt" src="assets/images/Boyfrind.png" alt="Album Art">
+        </div>
+            <div class="player-controls">
+                <h3 id="songTitle" style="margin: 10px 0; font-size: 18px;">🎶 Boyfrind</h3>
+                <audio id="pageAudio" style="width: 100%; margin: 10px 0;">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-buttons">
+                    <button id="pauseResumeBtn" class="player-btn">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="gallery.html" class="btn">Next 👉</a>
+</div>
+
+    <script>
+        const pageAudio = document.getElementById('pageAudio');
+        const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+        
+        // Set the song for this page
+        pageAudio.src = 'assets/images/music/Boyfrind.mp3';
+        
+        // Check if user has already started music on page 1
+        if (localStorage.getItem('musicStarted') === 'true') {
+            // Auto-play when page loads
+            window.addEventListener('load', () => {
+                pageAudio.play().catch(err => console.log('Autoplay:', err));
+                pauseResumeBtn.textContent = '⏸ Pause';
+            });
+        }
+        
+        // Button click - play or pause
+        pauseResumeBtn.addEventListener('click', () => {
+            if (pageAudio.paused) {
+                pageAudio.play();
+                pauseResumeBtn.textContent = '⏸ Pause';
+                localStorage.setItem('musicStarted', 'true');
+            } else {
+                pageAudio.pause();
+                pauseResumeBtn.textContent = '▶ Play';
+            }
+        });
+    </script></body>
+</html>

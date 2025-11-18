@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Abeeha 💜</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffb3e6, #d3a4ff, #ff9ed3);
+            background-size: 400% 400%;
+            animation: bgFlow 14s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        @keyframes bgFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            margin-top: 70px;
+        }
+
+        .title {
+            font-size: 38px;
+            font-weight: 700;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .text {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 2.5s ease;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 35px;
+            background: white;
+            color: #d34fd6;
+            font-size: 18px;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(223, 0, 189, 0.35);
+            transition: 0.3s;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* Music Player Styles */
+        .music-player-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2.5s ease;
+        }
+
+        .music-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .player-controls {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .song-selector {
+            margin-bottom: 20px;
+        }
+
+        .song-selector label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .song-selector select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #d34fd6;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .song-selector select:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #audioPlayer {
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .player-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #d34fd6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .album-art {
+                width: 150px;
+                height: 150px;
+            }
+
+            .music-player-section {
+                padding: 20px;
+            }
+
+            .player-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Our Roblox Story 💞</h1>
+
+    <p class="text">
+        Kabhi socha nahi tha ki ek simple game,  
+        ek random server — <b>New Smith RP</b>…  
+        itni beautiful memory ban jayega 💗✨  
+
+        Tumhe dekh kar hi feeling aa gayi thi ki  
+        "haan… yeh ladki alag hi vibe ki hai." 💕  
+
+        Tumhari baatein itni soft & pure hoti hain ki  
+        dil literally calm ho jata hai 😭🤍  
+        
+        Tumhari energy… tumhari smile…  
+        and the way you talk…  
+        sab kuch itna cute lagta hai ki  
+        kabhi-kabhi lagta hai Roblox ne  
+        hume milane ke liye hi banaya tha 🫶💜  
+    </p>
+
+    <!-- Music Player Section -->
+    <div class="music-player-section">
+        <h2 class="music-title">🎵 Special Songs For You 🎵</h2>
+        
+        <div class="music-player">
+            <div class="album-art">
+                <img id="albumArt" src="assets/images/Samjhawan.png" alt="Album Art">
+            </div>
+            
+            <div class="player-controls">
+                <h3 id="songTitle" style="margin: 10px 0; font-size: 18px;">🎶 Samjhawan</h3>
+                <audio id="pageAudio" style="width: 100%; margin: 10px 0;">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-buttons">
+                    <button id="pauseResumeBtn" class="player-btn">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="btn" href="page3.html">Next ➜</a>
+
+</div>
+
+    <script>
+        const pageAudio = document.getElementById('pageAudio');
+        const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+        
+        // Set the song for this page
+        pageAudio.src = 'assets/images/music/Samjhawan.mp3';
+        
+        // Check if user has already started music on page 1
+        if (localStorage.getItem('musicStarted') === 'true') {
+            // Auto-play when page loads
+            window.addEventListener('load', () => {
+                pageAudio.play().catch(err => console.log('Autoplay:', err));
+                pauseResumeBtn.textContent = '⏸ Pause';
+            });
+        }
+        
+        // Button click - play or pause
+        pauseResumeBtn.addEventListener('click', () => {
+            if (pageAudio.paused) {
+                pageAudio.play();
+                pauseResumeBtn.textContent = '⏸ Pause';
+                localStorage.setItem('musicStarted', 'true');
+            } else {
+                pageAudio.pause();
+                pauseResumeBtn.textContent = '▶ Play';
+            }
+        });
+    </script></body>
+</html>
+

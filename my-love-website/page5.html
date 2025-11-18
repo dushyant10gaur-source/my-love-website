@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abeeha’s Smile Page 💗✨</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ffb8e6, #ff8acb, #ff73b8);
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-top: 40px;
+            animation: fadeSlide 1.6s ease-out;
+        }
+
+        p {
+            margin: 20px;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            animation: fadeSlide 2s ease-out;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .floating {
+            position: absolute;
+            font-size: 26px;
+            animation: floatUp 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 0.4; }
+            100% { transform: translateY(-850px); opacity: 0; }
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #fff;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 10px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Music Player Styles */
+        .music-player-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeSlide 2.5s ease-out;
+        }
+
+        .music-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .player-controls {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .song-selector {
+            margin-bottom: 20px;
+        }
+
+        .song-selector label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .song-selector select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #d34fd6;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .song-selector select:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #audioPlayer {
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .player-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #d34fd6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .album-art {
+                width: 150px;
+                height: 150px;
+            }
+
+            .music-player-section {
+                padding: 20px;
+            }
+
+            .player-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>💗 Abeeha… you know what? 💗</h1>
+
+    <p>
+        Tumhari ek choti si smile bhi  
+        <span class="highlight">pure din ka mood reset kar deti hai 😭✨</span><br>
+        Matlab… literally system restart ho jata hai.  
+    </p>
+
+    <p>
+        Tum jo “Awww 😭❤️” bolti ho na…  
+        uska effect 💘 *direct dil ke processor pe* chala jaata hai.  
+        Overheating ho jati hai 😭🔥😂
+    </p>
+
+    <p>
+        Aur sach bataun?  
+        Kabhi kabhi tumhari baatein itni cute hoti hain ki  
+        <span class="highlight">highlight karne ka mann karta hai — poori ki poori 😌🩷</span>
+    </p>
+
+    <p>
+        Bas… ye page ek hi baat ke liye hai:  
+        <b>You’re adorable, Abeeha. Frfr. 💕✨</b>
+    </p>
+
+    <div class="signature">
+        Made 💘 by Dushyant <br>
+        
+    </div>
+
+    <!-- Music Player Section -->
+    <div class="music-player-section">
+        <h2 class="music-title">🎵 Special Songs For You 🎵</h2>
+        
+        <div class="music-player">
+            <div class="album-art">
+                <img id="albumArt" src="assets/images/Pehli Nazar Mein.png" alt="Album Art">
+            </div>
+            
+            <div class="player-controls">
+                <h3 id="songTitle" style="margin: 10px 0; font-size: 18px;">🎶 Pehli Nazar Mein</h3>
+                <audio id="pageAudio" style="width: 100%; margin: 10px 0;">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-buttons">
+                    <button id="pauseResumeBtn" class="player-btn">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pageAudio = document.getElementById('pageAudio');
+        const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+        
+        // Set the song for this page
+        pageAudio.src = 'assets/images/music/Pehli Nazar Mein.mp3';
+        
+        // Check if user has already started music on page 1
+        if (localStorage.getItem('musicStarted') === 'true') {
+            // Auto-play when page loads
+            window.addEventListener('load', () => {
+                pageAudio.play().catch(err => console.log('Autoplay:', err));
+                pauseResumeBtn.textContent = '⏸ Pause';
+            });
+        }
+        
+        // Button click - play or pause
+        pauseResumeBtn.addEventListener('click', () => {
+            if (pageAudio.paused) {
+                pageAudio.play();
+                pauseResumeBtn.textContent = '⏸ Pause';
+                localStorage.setItem('musicStarted', 'true');
+            } else {
+                pageAudio.pause();
+                pauseResumeBtn.textContent = '▶ Play';
+            }
+        });
+
+        // Floating emojis function
+        function floatEmoji() {
+            const e = document.createElement("div");
+            e.className = "floating";
+            const emojis = ["💗", "✨", "😊", "🥺", "💕", "💖"];
+            e.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            e.style.left = Math.random() * window.innerWidth + "px";
+            e.style.bottom = "-20px";
+            document.body.appendChild(e);
+
+            setTimeout(() => e.remove(), 8000);
+        }
+
+        setInterval(floatEmoji, 600);
+    </script>
+
+
+</body>
+</html>
