@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Abeeha 💞</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9cd6, #ff7fc4, #ff58b2);
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            margin: 20px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: #ff267d;
+            font-size: 22px;
+            animation: rise 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            100% { transform: translateY(-800px) translateX(40px); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-size: 1rem;
+            opacity: 0.9;
+            animation: fadeIn 3.4s ease-in-out;
+        }
+
+        .final {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 30px;
+            animation: scaleUp 3.5s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Music Player Styles */
+        .music-player-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2.5s ease;
+        }
+
+        .music-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .player-controls {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .song-selector {
+            margin-bottom: 20px;
+        }
+
+        .song-selector label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .song-selector select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #d34fd6;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .song-selector select:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #audioPlayer {
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .player-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #d34fd6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .player-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .album-art {
+                width: 150px;
+                height: 150px;
+            }
+
+            .music-player-section {
+                padding: 20px;
+            }
+
+            .player-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>💖 Abeeha, the final page… but not the final feeling 💖</h1>
+
+    <p>
+        Matched in Roblox… connected in chats…  
+        And somehow you ended up becoming  
+        <b>the cutest part of my entire day 🥺💞</b>
+    </p>
+
+    <p>
+        Tumhari baatein, tumhara smiley spam,  
+        tumhara “Nahi 😌” aur “Awww ❤️”  
+        sab itna naturally sweet lagta hai ki  
+        <b>real-life ka stress literally dissolve ho jata hai 😭✨</b>
+    </p>
+
+    <p>
+        Aur haan… just in case you ever forget:  
+        <b>I’m here. Always. No tension, no overthinking 🤞💗</b>
+    </p>
+
+    <p class="final">
+        Bas itna hi — <br>
+        <b>You’re special, Abeeha. Fr.💗</b>
+    </p>
+
+    <div class="signature">
+        Made 💖 by <b>Dushyant</b><br>
+       
+    </div>
+
+    <!-- Music Player Section -->
+    <div class="music-player-section">
+        <h2 class="music-title">🎵 Special Songs For You 🎵</h2>
+        
+        <div class="music-player">
+            <div class="album-art">
+                <img id="albumArt" src="assets/images/Maula Mere Muala.png" alt="Album Art">
+            </div>
+            
+            <div class="player-controls">
+                <h3 id="songTitle" style="margin: 10px 0; font-size: 18px;">🎶 Maula Mere Muala</h3>
+                <audio id="pageAudio" style="width: 100%; margin: 10px 0;">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-buttons">
+                    <button id="pauseResumeBtn" class="player-btn">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="page5.html" class="btn">Next ➜</a>
+        
+    <!-- Floating hearts -->
+    <script>
+        const pageAudio = document.getElementById('pageAudio');
+        const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+        
+        // Set the song for this page
+        pageAudio.src = 'assets/images/music/Maula Mere Muala.mp3';
+        
+        // Check if user has already started music on page 1
+        if (localStorage.getItem('musicStarted') === 'true') {
+            // Auto-play when page loads
+            window.addEventListener('load', () => {
+                pageAudio.play().catch(err => console.log('Autoplay:', err));
+                pauseResumeBtn.textContent = '⏸ Pause';
+            });
+        }
+        
+        // Button click - play or pause
+        pauseResumeBtn.addEventListener('click', () => {
+            if (pageAudio.paused) {
+                pageAudio.play();
+                pauseResumeBtn.textContent = '⏸ Pause';
+                localStorage.setItem('musicStarted', 'true');
+            } else {
+                pageAudio.pause();
+                pauseResumeBtn.textContent = '▶ Play';
+            }
+        });
+
+        // Floating hearts function
+        function heart() {
+            const h = document.createElement("div");
+            h.className = "heart";
+            h.innerHTML = "💖";
+            h.style.left = Math.random() * window.innerWidth + "px";
+            document.body.appendChild(h);
+            setTimeout(() => h.remove(), 6000);
+        }
+        setInterval(heart, 500);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OneDrive / temp
+~$*
+~*.tmp
+~*.~*
+
+# Logs
+*.log
+
+# Node (if used locally)
+node_modules/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Archives
+*.zip
+*.tar.gz
+
+# Ignore user-specific env files
+.env
+
+# Keep site assets (images/audio) tracked; if audio files exceed GitHub file limits, consider Git LFS
+# *.mp3
+# If you want to ignore generated build output, add paths for that here.
